@@ -15,7 +15,7 @@ import org.junit.Test
  * Please also check out the ui test
  * @see ru.easycode.zerotoheroandroidtdd.Task016Test
  */
-class MainViewModelTest {
+class  MainViewModelTest {
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Before
