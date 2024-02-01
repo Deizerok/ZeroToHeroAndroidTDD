@@ -9,12 +9,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        tools:visibility="visible"
-        android:visibility="gone"
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
     <TextView
         android:visibility="gone"
         android:id="@+id/titleTextView"
@@ -22,6 +16,12 @@
         android:layout_height="wrap_content"
         tools:visibility="visible"
         android:text="Hello World!"/>
+    <ProgressBar
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:text="load"

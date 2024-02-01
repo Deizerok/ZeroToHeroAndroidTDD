@@ -7,8 +7,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-
-    private val viewModel = MainViewModel(LiveDataWrapper.Base(), Repository.Base())
+    private val viewModel = MainViewModel(LiveDataWrapper.Base() ,Repository.Base())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,12 +16,11 @@ class MainActivity : AppCompatActivity() {
         val buttonLoad = findViewById<Button>(R.id.actionButton)
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
-        buttonLoad.setOnClickListener {
+        buttonLoad.setOnClickListener{
             viewModel.load()
         }
-        viewModel.liveData().observe(this) { uiState ->
-            uiState.apply(buttonLoad, progressBar, textView)
+        viewModel.liveData().observe(this) {
+            it.apply(buttonLoad , progressBar , textView)
         }
-
     }
 }
