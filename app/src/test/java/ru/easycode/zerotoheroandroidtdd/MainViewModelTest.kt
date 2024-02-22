@@ -3,6 +3,7 @@ package ru.easycode.zerotoheroandroidtdd
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
@@ -44,7 +45,7 @@ class MainViewModelTest {
     }
 
     @Test
-    fun test() {
+    fun test()  {
         viewModel.load()
         liveDataWrapper.checkUpdateCalls(listOf(UiState.ShowProgress, UiState.ShowData))
         repository.checkLoadCalledTimes(1)
